@@ -91,12 +91,12 @@
         <details class="block-interactembed-embedtools mt-2">
             <summary>{{#str}}embedcode, block_interactembed{{/str}}</summary>
             <p class="small text-muted mt-2">{{#str}}embedcodedesc, block_interactembed{{/str}}</p>
-            <label class="sr-only visually-hidden" for="{{embedinputid}}">{{#str}}embedcode, block_interactembed{{/str}}</label>
+            <label class="visually-hidden" for="{{embedinputid}}">{{#str}}embedcode, block_interactembed{{/str}}</label>
             <textarea id="{{embedinputid}}" class="form-control" rows="4" readonly>{{embedcode}}</textarea>
             <button type="button" class="btn btn-secondary btn-sm mt-2" data-action="copy-embed">
                 {{#str}}copyembedcode, block_interactembed{{/str}}
             </button>
-            <span class="block-interactembed-copy-status ml-2 ms-2" aria-live="polite"></span>
+            <span class="block-interactembed-copy-status ms-2" aria-live="polite"></span>
         </details>
     {{/showembedtools}}
 </div>

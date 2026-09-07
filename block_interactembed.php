@@ -171,6 +171,17 @@ class block_interactembed extends block_base {
             $config->loadonrequest = 1;
         }
 
+        // Validate an uploaded package while it is still in draft storage. PostgreSQL does not
+        // restore deleted Files API records when the surrounding delegated transaction rolls back,
+        // so rejecting an unsafe replacement after file_save_draft_area_files() could remove the
+        // previously working package. The validation after the move remains as defence in depth.
+        if ($sourcetype === 'package' && $packageorigin !== 'library') {
+            \block_interactembed\local\package\package_importer::validate_draft(
+                $draftitemid,
+                (string)($config->entrypoint ?? 'index.html')
+            );
+        }
+
         if ($sourcetype === 'package' && $packageorigin === 'library') {
             $coursecontext = \block_interactembed\local\creator_connector::course_context($this->context);
             if (!$coursecontext) {

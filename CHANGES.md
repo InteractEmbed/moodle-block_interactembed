@@ -1,5 +1,12 @@
 # Change log
 
+## 0.9.0-beta34 — 2026-09-07
+
+- Validated uploaded HTML5 packages in draft storage before replacing the active Files API area, so an unsafe replacement cannot remove the previous working package on PostgreSQL.
+- Retained the post-move package validation as a second line of defence.
+- Reordered the English language strings to satisfy Moodle CodeSniffer with zero warnings.
+- Removed the legacy Bootstrap `.sr-only` and `.ml-2` aliases while retaining their Moodle 4.5-compatible `.visually-hidden` and `.ms-2` equivalents.
+
 ## 0.9.0-beta33 — 2026-09-02
 
 - Hardened the same-Moodle resize channel with a per-render nonce, exact message schema, expected origin and iframe-source binding.

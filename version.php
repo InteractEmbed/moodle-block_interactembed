@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_interactembed';
-$plugin->version = 2026090202;
-$plugin->release = '0.9.0-beta33';
+$plugin->version = 2026090700;
+$plugin->release = '0.9.0-beta34';
 $plugin->requires = 2024100700;
 $plugin->supported = [405, 502];
 $plugin->maturity = MATURITY_BETA;
