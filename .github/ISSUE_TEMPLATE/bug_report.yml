@@ -1,0 +1,76 @@
+name: Bug report
+description: Report a reproducible InteractEmbed defect
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve InteractEmbed. Do not include passwords, session cookies, learner data or exploitable security details. Report vulnerabilities through the private security channel described in SECURITY.md.
+  - type: input
+    id: moodle
+    attributes:
+      label: Moodle version
+      description: Include the complete version and build number.
+      placeholder: Moodle 5.2.2+ (Build 20260818)
+    validations:
+      required: true
+  - type: input
+    id: plugin
+    attributes:
+      label: InteractEmbed version
+      placeholder: 0.9.0-beta13
+    validations:
+      required: true
+  - type: input
+    id: php
+    attributes:
+      label: PHP and database versions
+      placeholder: PHP 8.4.17; MariaDB 11.4
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Content source
+      options:
+        - Included guide
+        - Web address or iframe
+        - HTML5 package
+        - Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest safe example that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility or privacy impact
+      description: Mention keyboard, screen-reader, responsive-layout or external-connection effects when relevant.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I removed credentials, personal information, learner data and private packages.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true
