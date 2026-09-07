@@ -1,5 +1,13 @@
 # Change log
 
+## 1.0.0 — 2026-09-07
+
+- Declared the first stable release after the coordinated user recipe completed successfully on Moodle 4.5, 5.0 and 5.2.
+- Confirmed the public Moodle Plugin CI matrix on Moodle 4.5 through 5.2, PHP 8.1 through 8.4, MariaDB and PostgreSQL, including PHPUnit and Behat.
+- Confirmed clean installation, upgrades from earlier betas, multiple independent blocks, public-site use, keyboard and full-screen operation, and complete course backup and restore.
+- Confirmed optional InteractEmbed Creator API v1 selection, immutable block-owned snapshots and continued standalone operation when Creator is unavailable.
+- Finalised the reproducible distribution archive, security documentation and English, French and Spanish Marketplace material.
+
 ## 0.9.0-beta34 — 2026-09-07
 
 - Validated uploaded HTML5 packages in draft storage before replacing the active Files API area, so an unsafe replacement cannot remove the previous working package on PostgreSQL.
