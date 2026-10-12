@@ -102,3 +102,16 @@ function block_interactembed_get_file_for_area(context $context, string $fileare
         $filename
     );
 }
+
+/**
+ * Loads the iframe resizer on destination pages on Moodle 4.0 to 4.3.
+ *
+ * Moodle 4.4 and later use the equivalent output hook in db/hooks.php.
+ *
+ * @return string Empty footer markup.
+ */
+function block_interactembed_before_footer(): string {
+    global $PAGE;
+    $PAGE->requires->js_call_amd('block_interactembed/embed_resizer', 'init');
+    return '';
+}

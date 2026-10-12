@@ -1,5 +1,14 @@
 # Change log
 
+## 1.0.1 — 2026-10-12
+
+- Addresses Marketplace MMR-212 issues #1 and #2: the copied-iframe resizer
+  now uses Moodle AMD and destination-page output hooks; template licence,
+  context variables and example context are documented.
+- Preserves origin, source, nonce, message schema and height validation.
+  New copied snippets contain only the iframe; old resizer URLs remain inert
+  compatibility files so existing same-site snippets keep working via AMD.
+
 ## 1.0.0 — 2026-09-07
 
 - Declared the first stable release after the coordinated user recipe completed successfully on Moodle 4.5, 5.0 and 5.2.

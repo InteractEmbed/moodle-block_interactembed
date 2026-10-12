@@ -294,7 +294,7 @@ final class content_factory {
      * @param string $title accessible iframe title
      * @param int $height iframe height
      * @param int $instanceid block instance id
-     * @return string copyable iframe and resizer script
+     * @return string copyable iframe; Moodle loads the resizer through AMD
      */
     private static function embed_code(moodle_url $embedurl, string $title, int $height, int $instanceid): string {
         $nonce = message_nonce::create();
@@ -311,8 +311,6 @@ final class content_factory {
             'data-interactembed-nonce' => $nonce,
             'style' => 'border:0;display:block;width:100%;',
         ]);
-        $resizerurl = new moodle_url('/blocks/interactembed/embed-resizer.js', ['v' => 2026090202]);
-        $embedcode .= html_writer::script('', $resizerurl);
         return $embedcode;
     }
 }

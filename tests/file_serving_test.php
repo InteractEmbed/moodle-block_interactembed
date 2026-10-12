@@ -104,7 +104,7 @@ final class file_serving_test extends \advanced_testcase {
         $this->assertStringContainsString('/blocks/interactembed/embed.php', $data['embedcode']);
         $this->assertMatchesRegularExpression('/[?&amp;]nonce=[a-f0-9]{32}/', $data['embedcode']);
         $this->assertMatchesRegularExpression('/data-interactembed-nonce="[a-f0-9]{32}"/', $data['embedcode']);
-        $this->assertStringContainsString('embed-resizer.js?v=2026090202', $data['embedcode']);
+        $this->assertStringNotContainsString('<script', $data['embedcode']);
         $this->assertStringNotContainsString('allow-popups-to-escape-sandbox', $data['sandbox']);
         $this->assertSame('Internal description', $data['description']);
         $this->assertTrue($data['hasdescription']);
